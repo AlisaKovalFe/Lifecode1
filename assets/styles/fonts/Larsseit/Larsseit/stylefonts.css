@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Larsseit"; 
+    src: url("./fonts/Larsseit/Larsseit/Larsseit-Medium.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+    }
+    
+@font-face {
+        font-family: "Larsseit"; 
+        src: url("./fonts/Larsseit/Larsseit/Larsseit-Bold.otf") format("truetype"); 
+        font-style: bold; 
+        font-weight: bold; 
+} 
+
+@font-face {
+    font-family: "Larsseit"; 
+    src: url("./fonts/Larsseit/Larsseit/Larsseit-ExtraBold.otf") format("truetype"); 
+    font-style: bolder; 
+    font-weight: bolder; 
+}   
+
+@font-face {
+    font-family: "Larsseit"; 
+    src: url("./fonts/Larsseit/Larsseit/Larsseit-Thin.otf") format("truetype"); 
+    font-style: thin; 
+    font-weight: thin; 
+}     
+
+@font-face {
+    font-family: "Larsseit"; 
+    src: url("./fonts/Larsseit/Larsseit/Larsseit.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
