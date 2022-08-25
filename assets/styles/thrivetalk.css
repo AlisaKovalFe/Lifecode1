@@ -1,41 +1,30 @@
-* {
-    
-}
-
 body {
     font-family: "Larsseit", sans-serif;
     width: 100vw;    
     height: 100vh;
 }
 
-header {   
+.header-container {
+    display:flex;   
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+    
+    padding-top: 15px;
+    
+    height: 10vh;
     background: #F4F9E2;
 }
 
-.header-container {
-    display:flex;   
-    align-items: center;
-    padding-top: 20px;
-    
-    height: 10vh;
-}
-
-.logo {
-    margin-left: 140px;
-}
-
-nav {
-    margin-left: 200px;
-    
+nav {    
     font-size: 14px;
     line-height: 16px;
-
-    color: #22356F;
 }
 
-.nav-link {
+a.nav-link {
     margin-right: 15px;
     text-decoration: none;    
+    color: #22356F;
 }
 
 .nav-link:hover {
@@ -48,8 +37,6 @@ nav {
 }
 
 .button-contacts {
-    margin-left: auto;
-
     width: 145px;
     height: 45px;
 
@@ -65,38 +52,31 @@ nav {
     border-radius: 50px;
     border: none;    
 }
-
-/*-------------------------------------------------Main-----------------------------------------------------*/
+/*--------------------------------------------Main-------------------------------------*/
 
 /*-------------------------------------1page-------------------------*/
-
-main {
-    
-}
 
 .container-firstpage {
     display:flex;
     flex-flow: row nowrap;   
+    justify-content:space-around; /*почему-то оно не работает*/
     
     background: #F4F9E2;
 
-    background-image: url(/ITGirlsHomework/lifecode/assets/images/foto2.png);
+    background-image: url(/ITGirlsHomework/Lifecode1/assets/images/foto2.png); /*как эту голубую картинку расположить с заплывом на хедер не поняла; десь картинка добавлена как бэкграунд картинка, но периодически она не подгружтвается*/
     background-repeat: no-repeat;
     background-position:right;
-    background-position-y: top;
-    
+    background-position-y: top;    
 }
-
 
 .content-firstpage {
     margin-left: 140px;
-    padding-top: 170px;
-    
+    padding-top: 170px;   
 }
 
 .main-header {
-    padding-bottom: 30px;
-    margin-bottom: 19px;
+    padding: 0;
+    margin: 20px 0px 20px;
     font-size: 48px;
     line-height: 53px;
     letter-spacing: -0.035em;
@@ -118,6 +98,8 @@ button.whodoido{
 
     align-items: center;
     letter-spacing: 0.1em;
+
+    border: none;  
 }
 
 button.whoiam {
@@ -130,12 +112,10 @@ button.whodoido {
     background-color: #F4F9E2;
 }
 
-
 .img-firstpage {
     position: relative;
-    top: -53px;
+    top: -60px; /*если больше в минус, то перекрывает кнопку "contacts", как по-другому спозиционировать не знаю*/
 }
-
 
 /*-------------------------------------2page-------------------------*/
 
@@ -143,10 +123,10 @@ button.whodoido {
     display:flex;
     align-items: center;
     
-    height: 607px;
+    height:max-content;
     color: #FFFFFF;
     background-color: #62D0DF;
-    background-image: url(/ITGirlsHomework/lifecode/assets/images/foto3.jpg);
+    background-image: url(/ITGirlsHomework/Lifecode1/assets/images/foto3.jpg); /*здесь картинка с девушкой добавлена как бэкграунд картинка, но периодически она не подгружтвается; добалвение через img в html  приводила к кривому расположению*/
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -157,7 +137,7 @@ button.whodoido {
 }
 
 .header-secondpage {
-    padding-top: 100px;  /*когда все-таки падинг когда маржин??*/
+    padding-top: 100px;  
     margin-bottom: 75px;
     font-size: 36px;
     line-height: 27px;
@@ -166,13 +146,11 @@ button.whodoido {
 
 .paragraph-secondpage {    
     padding-bottom: 50px;
-    font-size: 24px;            /*не поняла как сделать часть текста внутри параграфа менее жирной*/
-    line-height: 35px;
-    
+    font-size: 24px;       /*не поняла как сделать часть текста внутри параграфа менее жирной, пробовала отдельно через span, не получилось*/
+    line-height: 35px;    
 }
 
 /*-------------------------------------3page-------------------------*/
-
 
 .container-thirdpage {
     display:flex;
@@ -182,23 +160,20 @@ button.whodoido {
     padding-top: 70px;
     
     color: #22356F;
-    
-    border: 1px solid red;
-}
-
-.header-thirdpage-one {
-    margin-left: 106px;
-    font-size: 16px;
-    line-height: 23px;
-    letter-spacing: 0.06em; 
 }
 
 .content-thirdpage-first {
-    display:inline-flex;
+    display:flex;
     flex-direction: row;
     justify-content:space-around;   
     
     padding-bottom: 121px;
+}
+
+.header-thirdpage-one {    
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.06em; 
 }
 
 .paragraph-thirdpage {
@@ -209,9 +184,9 @@ button.whodoido {
 }
 
 .header-thirdpage-two {
+    text-align: center;
     font-size: 16px;
     line-height: 19px;
-    text-align: center;
     letter-spacing: 0.06em;
 
     color: rgba(34, 53, 111, 0.5);
@@ -231,7 +206,7 @@ button.whodoido {
     justify-content: center;
     align-items:center;
 
-    flex-basis: 25%;
+    width: 25%;
     height: 30vh;    
     font-size: 32px;
     line-height: 34px;
