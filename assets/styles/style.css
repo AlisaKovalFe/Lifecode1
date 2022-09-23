@@ -4,7 +4,7 @@ body {
     height: 100vh;
 }
 
-.header-container {
+.header {
     display:flex;   
     flex-direction: row;
     justify-content: space-around; 
@@ -14,6 +14,7 @@ body {
     
     height: 10vh;
     background: #F4F9E2;
+
 }
 
 nav {    
@@ -21,22 +22,23 @@ nav {
     line-height: 16px;
 }
 
-a.nav-link {
+.nav__link {
     margin-right: 15px;
     text-decoration: none;    
     color: #22356F;
 }
 
-.nav-link:hover {
+.nav__link:hover {
     color:darkorchid;
 }
 
-.nav-link:first-child {    
+.nav__link_underline {    
     padding-bottom: 5px;
     box-shadow: inset 0px -1px 0px #22356F;    
 }
 
-.button-contacts {
+.header__button-contacts {
+    z-index: 1;
     width: 145px;
     height: 45px;
 
@@ -52,29 +54,34 @@ a.nav-link {
     border-radius: 50px;
     border: none;    
 }
+
+.header__button-contacts:hover {
+    text-decoration: underline;
+}
+
+
 /*--------------------------------------------Main-------------------------------------*/
 
-/*-------------------------------------1page-------------------------*/
+/*-------------------------------------About-------------------------*/
 
-.container-firstpage {
+.about {
     display:flex;
     flex-flow: row nowrap;   
-    justify-content:space-around; /*почему-то оно не работает*/
-    
+    justify-content:space-between; 
     background: #F4F9E2;
-
-    background-image: url(/ITGirlsHomework/Lifecode1/assets/images/foto2.png); /*как эту голубую картинку расположить с заплывом на хедер не поняла; десь картинка добавлена как бэкграунд картинка, но периодически она не подгружтвается*/
-    background-repeat: no-repeat;
-    background-position:right;
-    background-position-y: top;    
 }
 
-.content-firstpage {
+.about__content {
     margin-left: 140px;
-    padding-top: 170px;   
+    padding-top: 170px;  
+    width: 40%; 
 }
 
-.main-header {
+.about__logo {
+    margin-bottom: 2em;
+}
+
+.about__title {
     padding: 0;
     margin: 20px 0px 20px;
     font-size: 48px;
@@ -83,7 +90,7 @@ a.nav-link {
     color: #22356F;
 } 
 
-.paragraph-firstpage {
+.about__description {
     margin-bottom: 63px;
     
     font-size: 24px;
@@ -91,52 +98,68 @@ a.nav-link {
     color: #22356F;
 }
 
-button.whoiam,
-button.whodoido{
+.about__button {
     width: 150px;
     height: 50px;
-
     align-items: center;
     letter-spacing: 0.1em;
-
     border: none;  
+    margin-bottom: 15vh;
 }
 
-button.whoiam {
+.about__button_whoiam {
+    margin-right: 1em;
     color: #FFFFFF;
     background: #F9B640;
 }
 
-button.whodoido {
+.about__button_whoiam:hover,
+.about__button_whodoido:hover {
+    text-decoration: underline;
+}
+
+.about__button_whodoido {
     color: #FAB63E;
     background-color: #F4F9E2;
 }
 
-.img-firstpage {
+.about__img {
+    width: 50%;
+    max-width: 50%;
+    object-fit: cover;
     position: relative;
-    top: -60px; /*если больше в минус, то перекрывает кнопку "contacts", как по-другому спозиционировать не знаю*/
+    z-index: 0;
+    top: -70px;  
 }
 
-/*-------------------------------------2page-------------------------*/
-
-.container-secondpage {
-    display:flex;
-    align-items: center;
+.about__img_background {
+    position: absolute;
+    top: -10px;  
+    left: 43em;
+    background-image: url(/Lifecode1/assets/images/background.png);
+    background-repeat: no-repeat;
+    background-size:contain;
     
+    
+}
+
+/*-------------------------------------Explanation-------------------------*/
+
+.explanation {
+    display:flex;
+    align-items: center;   
     height:max-content;
     color: #FFFFFF;
     background-color: #62D0DF;
-    background-image: url(/ITGirlsHomework/Lifecode1/assets/images/foto3.jpg); /*здесь картинка с девушкой добавлена как бэкграунд картинка, но периодически она не подгружтвается; добалвение через img в html  приводила к кривому расположению*/
-    background-repeat: no-repeat;
-    background-position: right;
+    justify-content: space-between;
 }
 
-.content-secondpage {
-    margin-left: 140px;
+.explanation__content {
+    margin-left: 120px;
     width: 45%;    
 }
 
-.header-secondpage {
+.explanation__title {
     padding-top: 100px;  
     margin-bottom: 75px;
     font-size: 36px;
@@ -144,87 +167,171 @@ button.whodoido {
     letter-spacing: -0.006em;
 } 
 
-.paragraph-secondpage {    
+.explanation__description {    
     padding-bottom: 50px;
-    font-size: 24px;       /*не поняла как сделать часть текста внутри параграфа менее жирной, пробовала отдельно через span, не получилось*/
+    font-size: 24px;       
     line-height: 35px;    
 }
 
-/*-------------------------------------3page-------------------------*/
+.explanation__description_bold {
+    font-size:larger;
+}
 
-.container-thirdpage {
+.explanation__img {
+    width: 40%;
+    max-width: 40%;
+}
+
+/*-------------------------------------Mission-------------------------*/
+
+.mission {
     display:flex;
-    flex-direction: column;
-
-    justify-content: space-around;
-    padding-top: 70px;
-    
+    flex-direction: row;
+    justify-content:start;    
+    margin: 10em 7em 5em;   
+    padding-bottom: 121px;
     color: #22356F;
 }
 
-.content-thirdpage-first {
-    display:flex;
-    flex-direction: row;
-    justify-content:space-around;   
-    
-    padding-bottom: 121px;
-}
-
-.header-thirdpage-one {    
+.mission__title {    
+    margin-right: 12em;
+    width: 15%;
     font-size: 16px;
     line-height: 23px;
     letter-spacing: 0.06em; 
 }
 
-.paragraph-thirdpage {
-    flex-basis: 35%;
+.mission__description {
+    width: 45%;
     font-size: 24px;
     line-height: 34px;
     letter-spacing: 0.005em;
 }
 
-.header-thirdpage-two {
+/*-------------------------------------Help-------------------------*/
+
+.help {
+    margin-bottom: 5em;
+}
+
+.help__title {
+    margin-bottom: 3em;
     text-align: center;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.06em;
-
     color: rgba(34, 53, 111, 0.5);
 }
 
-.container-options {
+.help__items {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    color: #FFFFFF;
 }
 
-.option {
-    display: flex;   
+.help__item {
+    display: flex;  
+    flex-direction: column; 
     justify-content: center;
     align-items:center;
 
     width: 25%;
-    height: 30vh;    
+    height: 40vh;    
     font-size: 32px;
     line-height: 34px;
     letter-spacing: -0.006em;
 }
 
-#option-one {
+.help__item_pink {
     background: #FFE2DE;    
 }
 
-#option-two {
+.help__item_green {
     background: #C4E769;;
 }
 
-#option-three {
+.help__item_aqua {
     background: #62D0DF;
 }
 
-#option-four {
+.help__item_blue {
     background: #0052C1;
+}
+
+.help__item-content {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #ffffff;
+}
+
+.help__item-title {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: -0.006em;
+
+    color: #FFFFFF;
+}
+
+.help__item-sign {
+    color: #E9B730;
+    margin-right: 0.5em;
+}
+
+
+/*-------------------------------------Footer-------------------------*/
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__img {
+    width: 40%;
+    max-width: 40%;
+    margin-right: 5em;
+}
+
+.footer__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__info-items {
+    width: 25%;
+}
+
+.footer__title {
+    font-size: 14px;
+    line-height: 11px;
+    letter-spacing: -0.006em;
+    color: #22356F;
+}
+
+.footer__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: -0.006em;
+    color: rgba(34, 53, 111, 0.5);
+}
+
+.footer__copyright {
+    display: flex;
+    padding-left: 10em;
+    align-items:center;
+    height: 10vh;
+    background: #62D0DF;
+}
+
+.footer__copy,
+.footer__desc {
+    font-size: 16px;
+    line-height: 11px;
+    letter-spacing: -0.006em;
+    color: #ffffff;
+}
+
+.footer__copy {
+    margin-right: 1em;
 }
